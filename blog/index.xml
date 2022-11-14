@@ -7,30 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2022, Lihui Zhang</copyright>
-    <lastBuildDate>Sun, 13 Nov 2022 23:05:08 -0500</lastBuildDate><atom:link href="https://raynei.dev/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 13 Nov 2022 15:05:08 -0500</lastBuildDate><atom:link href="https://raynei.dev/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello Blogging</title>
       <link>https://raynei.dev/hello-blogging/</link>
-      <pubDate>Sun, 13 Nov 2022 23:05:08 -0500</pubDate>
+      <pubDate>Sun, 13 Nov 2022 15:05:08 -0500</pubDate>
       
       <guid>https://raynei.dev/hello-blogging/</guid>
       <description>This is my first attempt at &amp;ldquo;serious&amp;rdquo; blogging.
 I mainly just want to practice writing more, and also save some of my thoughts.
 You can expect some sprinkles of my life, programming topics I find interesting, or just general nerdy stuff :) .
 Hopefully you find something intersting in the coming blogs.</description>
-    </item>
-    
-    <item>
-      <title>A custom std::vector</title>
-      <link>https://raynei.dev/a-custom-stdvector/</link>
-      <pubDate>Sun, 13 Nov 2022 17:33:17 -0500</pubDate>
-      
-      <guid>https://raynei.dev/a-custom-stdvector/</guid>
-      <description>Introduction This tutorial expects some basic C++ competency and familiarity with templates.
-A vector is a dynamically sized contigous container, and probably the easiest STL container to implement following std::array.
-Our implementation won&amp;rsquo;t contain all the member functions that std::vector has, since most of them are trivial to implement after the relevant ones.
-Class layout There is only three members in the class:
- A variable to track capacity, or the max size A variable to track how many elements are in the vector The buffer to hold the elements  template &amp;lt;typename T&amp;gt; class vec { std::size_t cap; std::size_t size; T* arr; }; </description>
     </item>
     
   </channel>
