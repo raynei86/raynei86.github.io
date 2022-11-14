@@ -18,7 +18,7 @@
 A vector is a dynamically sized contigous container, and probably the easiest STL container to implement following std::array.
 Our implementation won&amp;rsquo;t contain all the member functions that std::vector has, since most of them are trivial to implement after the relevant ones.
 Class layout There is only three members in the class:
- A variable to track capacity, or the max size A variable to track how many elements are in the vector The buffer to hold the elements  template &amp;lt;typename T&amp;gt; class vec { std::size_t cap; std::size_t size; T* arr; }; </description>
+A variable to track capacity, or the max size A variable to track how many elements are in the vector The buffer to hold the elements template &amp;lt;typename T&amp;gt; class vec { std::size_t cap; std::size_t size; T* arr; }; </description>
     </item>
     
     <item>
