@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://raynei.dev/images/favicon.png" />
+<title>A custom std::vector | youye</title>
+<meta name="title" content="A custom std::vector" />
+<meta name="description" content="Introduction This tutorial expects some basic C&#43;&#43; competency and familiarity with templates.
+A vector is a dynamically sized contigous container, and probably the easiest STL container to implement following std::array.
+Our implementation won&rsquo;t contain all the member functions that std::vector has, since most of them are trivial to implement after the relevant ones.
+Class layout There is only three members in the class:
+ A variable to track capacity, or the max size A variable to track how many elements are in the vector The buffer to hold the elements  template &lt;typename T&gt; class vec { std::size_t cap; std::size_t size; T* arr; }; " />
+<meta name="keywords" content="cpp,learning," />
+
+
+<meta property="og:title" content="A custom std::vector" />
+<meta property="og:description" content="Introduction This tutorial expects some basic C&#43;&#43; competency and familiarity with templates.
+A vector is a dynamically sized contigous container, and probably the easiest STL container to implement following std::array.
+Our implementation won&rsquo;t contain all the member functions that std::vector has, since most of them are trivial to implement after the relevant ones.
+Class layout There is only three members in the class:
+ A variable to track capacity, or the max size A variable to track how many elements are in the vector The buffer to hold the elements  template &lt;typename T&gt; class vec { std::size_t cap; std::size_t size; T* arr; }; " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://raynei.dev/a-custom-stdvector/" />
+<meta property="og:image" content="https://raynei.dev/images/share.png"/>
+<meta property="article:published_time" content="2022-11-13T17:33:17-05:00" />
+<meta property="article:modified_time" content="2022-11-13T17:33:17-05:00" /><meta property="og:site_name" content="youye" />
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://raynei.dev/images/share.png"/>
+
+<meta name="twitter:title" content="A custom std::vector"/>
+<meta name="twitter:description" content="Introduction This tutorial expects some basic C&#43;&#43; competency and familiarity with templates.
+A vector is a dynamically sized contigous container, and probably the easiest STL container to implement following std::array.
+Our implementation won&rsquo;t contain all the member functions that std::vector has, since most of them are trivial to implement after the relevant ones.
+Class layout There is only three members in the class:
+ A variable to track capacity, or the max size A variable to track how many elements are in the vector The buffer to hold the elements  template &lt;typename T&gt; class vec { std::size_t cap; std::size_t size; T* arr; }; "/>
+
+
+
+<meta itemprop="name" content="A custom std::vector">
+<meta itemprop="description" content="Introduction This tutorial expects some basic C&#43;&#43; competency and familiarity with templates.
+A vector is a dynamically sized contigous container, and probably the easiest STL container to implement following std::array.
+Our implementation won&rsquo;t contain all the member functions that std::vector has, since most of them are trivial to implement after the relevant ones.
+Class layout There is only three members in the class:
+ A variable to track capacity, or the max size A variable to track how many elements are in the vector The buffer to hold the elements  template &lt;typename T&gt; class vec { std::size_t cap; std::size_t size; T* arr; }; ">
+<meta itemprop="datePublished" content="2022-11-13T17:33:17-05:00" />
+<meta itemprop="dateModified" content="2022-11-13T17:33:17-05:00" />
+<meta itemprop="wordCount" content="102">
+<meta itemprop="image" content="https://raynei.dev/images/share.png"/>
+
+
+
+<meta itemprop="keywords" content="cpp,learning," />
+
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>youye</h2>
+</a>
+<nav><a href="/">Home</a>
+
+
+<a href="/blog">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<h1>A custom std::vector</h1>
+<p>
+  <i>
+    <time datetime='2022-11-13' pubdate>
+      2022-11-13
+    </time>
+  </i>
+</p>
+
+<content>
+  <h2 id="introduction">Introduction</h2>
+<p>This tutorial expects some basic C++ competency and familiarity with templates.</p>
+<p>A vector is a dynamically sized contigous container,
+and probably the easiest STL container to implement following <code>std::array</code>.</p>
+<p>Our implementation won&rsquo;t contain all the member functions that <code>std::vector</code> has,
+since most of them are trivial to implement after the relevant ones.</p>
+<h2 id="class-layout">Class layout</h2>
+<p>There is only three members in the class:</p>
+<ul>
+<li>A variable to track capacity, or the max size</li>
+<li>A variable to track how many elements are in the vector</li>
+<li>The buffer to hold the elements</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">typename</span> T<span style="color:#f92672">&gt;</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">vec</span> {
+    std<span style="color:#f92672">::</span>size_t cap;
+    std<span style="color:#f92672">::</span>size_t size;
+    T<span style="color:#f92672">*</span> arr;
+};
+</code></pre></div>
+</content>
+<p>
+  
+  <a href="https://raynei.dev/blog/cpp/">#cpp</a>
+  
+  <a href="https://raynei.dev/blog/learning/">#learning</a>
+  
+</p>
+
+  </main>
+  <footer>
+</footer>
+
+    
+</body>
+
+</html>
