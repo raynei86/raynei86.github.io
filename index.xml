@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>youye</title>
+    <title>Youye</title>
     <link>https://raynei.dev/</link>
-    <description>Recent content on youye</description>
+    <description>Recent content on Youye</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2022, Lihui Zhang</copyright>
-    <lastBuildDate>Sun, 13 Nov 2022 15:05:08 -0500</lastBuildDate><atom:link href="https://raynei.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://raynei.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A custom std::vector</title>
+      <link>https://raynei.dev/a-custom-stdvector/</link>
+      <pubDate>Tue, 15 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://raynei.dev/a-custom-stdvector/</guid>
+      <description>Introduction This tutorial expects some basic C++ competency and familiarity with templates. It&amp;#39;s meant for &amp;#34;advanced beginners&amp;#34; who want to write idiomatic modern C++.
+The implementation is meant to be educational, so it won&amp;#39;t be comprehensive nor will it be very performant.
+The main topics we&amp;#39;ll cover are:
+Constructors &amp;amp; destructor Element access functions Modifier functions Class layout We are applying the rule of five here to enable move semantics, which is basically compiler optimizations.</description>
+    </item>
+    
     <item>
       <title>Hello Blogging</title>
       <link>https://raynei.dev/hello-blogging/</link>
