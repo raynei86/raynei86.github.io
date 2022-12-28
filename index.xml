@@ -7,17 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2022, Lihui Zhang</copyright>
-    <lastBuildDate>Tue, 15 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://raynei.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Dec 2022 17:32:19 -0500</lastBuildDate><atom:link href="https://raynei.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>A custom std::vector</title>
-      <link>https://raynei.dev/a-custom-stdvector/</link>
-      <pubDate>Tue, 15 Nov 2022 00:00:00 +0000</pubDate>
+      <title>Why avoid scanf as a beginner</title>
+      <link>https://raynei.dev/why-avoid-scanf-as-a-beginner/</link>
+      <pubDate>Tue, 27 Dec 2022 17:32:19 -0500</pubDate>
       
-      <guid>https://raynei.dev/a-custom-stdvector/</guid>
-      <description>Introduction This tutorial expects some basic C++ competency and familiarity with templates. It&amp;#39;s meant for &amp;#34;advanced beginners&amp;#34; who want to write idiomatic modern C++.
-The implementation is meant to be educational, so it won&amp;#39;t be comprehensive nor will it be very performant.
-The main topics we&amp;#39;ll cover are:
-Constructors &amp;amp; destructor Element access functions Modifier functions Class layout We are applying the rule of five here to enable move semantics, which is basically compiler optimizations.</description>
+      <guid>https://raynei.dev/why-avoid-scanf-as-a-beginner/</guid>
+      <description>Motivation In the TCCPP discord server, this was a question that was asked recently:
+Why does scanf only work when I scan for char before int?
+#include &amp;lt;stdio.h&amp;gt; int main() { int n; char c; scanf(&amp;#34;%d&amp;#34;, &amp;amp;n); // Code works if I put this line below the other scanf scanf(&amp;#34;%c&amp;#34;, &amp;amp;c); return 0; } It&amp;rsquo;s a simple program to read in a number and char, trivial enough to just use two scanf to read them in, right?</description>
     </item>
     
     <item>

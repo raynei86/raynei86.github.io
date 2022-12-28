@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog on Youye</title>
-    <link>https://raynei.dev/blog/</link>
-    <description>Recent content in Blog on Youye</description>
+    <title>c on Youye</title>
+    <link>https://raynei.dev/blog/c/</link>
+    <description>Recent content in c on Youye</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2022, Lihui Zhang</copyright>
-    <lastBuildDate>Tue, 27 Dec 2022 17:32:19 -0500</lastBuildDate><atom:link href="https://raynei.dev/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Dec 2022 17:32:19 -0500</lastBuildDate><atom:link href="https://raynei.dev/blog/c/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Why avoid scanf as a beginner</title>
       <link>https://raynei.dev/why-avoid-scanf-as-a-beginner/</link>
@@ -17,18 +17,6 @@
       <description>Motivation In the TCCPP discord server, this was a question that was asked recently:
 Why does scanf only work when I scan for char before int?
 #include &amp;lt;stdio.h&amp;gt; int main() { int n; char c; scanf(&amp;#34;%d&amp;#34;, &amp;amp;n); // Code works if I put this line below the other scanf scanf(&amp;#34;%c&amp;#34;, &amp;amp;c); return 0; } It&amp;rsquo;s a simple program to read in a number and char, trivial enough to just use two scanf to read them in, right?</description>
-    </item>
-    
-    <item>
-      <title>Hello Blogging</title>
-      <link>https://raynei.dev/hello-blogging/</link>
-      <pubDate>Sun, 13 Nov 2022 15:05:08 -0500</pubDate>
-      
-      <guid>https://raynei.dev/hello-blogging/</guid>
-      <description>This is my first attempt at &amp;ldquo;serious&amp;rdquo; blogging.
-I mainly just want to practice writing more, and also save some of my thoughts.
-You can expect some sprinkles of my life, programming topics I find interesting, or just general nerdy stuff :) .
-Hopefully you find something intersting in the coming blogs.</description>
     </item>
     
   </channel>
