@@ -221,31 +221,17 @@
 
 <a href="/blog">Blog</a>
 
-<a href="/index.xml">Feed</a>
 </nav>
 </header>
   <main>
 
 <h1>Why avoid scanf as a beginner</h1>
 <p>
-  <u>
+  <i>
     <time datetime='2022-12-27' pubdate>
       27 Dec, 2022
     </time>
-  </u>
-<p>
-A mini rant on avoiding scanf unless you know its quirks
-</p>
-
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#motivation">Motivation</a></li>
-    <li><a href="#buffer-overflow">Buffer overflow</a></li>
-    <li><a href="#reading-in-a-line">Reading in a line</a></li>
-    <li><a href="#the-solution">The solution</a></li>
-    <li><a href="#closing">Closing</a></li>
-  </ul>
-</nav>
+  </i>
 </p>
 
 <content>
@@ -280,7 +266,7 @@ So you have to use <code>&quot; %c&quot;</code> instead of <code>&quot;%c&quot;<
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;string.h&gt;</span><span style="color:#75715e">
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> realpass <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ILoveGNUEmacs198500&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> realpass <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ILoveGNUEmacs1985000&#34;</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">char</span> password[<span style="color:#ae81ff">20</span>];
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;Enter your password: &#34;</span>);
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">scanf</span>(<span style="color:#e6db74">&#34;%s&#34;</span>, password);
@@ -325,7 +311,7 @@ You can specify a buffer size, and it reads all the way till newline, EOF, or wh
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;string.h&gt;</span><span style="color:#75715e">
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> realpass <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ILoveGNUEmacs198500&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> realpass <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ILoveGNUEmacs1985000&#34;</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">char</span> password[<span style="color:#ae81ff">20</span>];
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;Enter your password: &#34;</span>);
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">// scanf(&#34;%s&#34;, password);
@@ -358,12 +344,9 @@ If you are just starting out, then sticking to <code>fgets</code> is the easier 
   <a href="https://raynei.dev/blog/beginner/">#beginner</a>
   
 </p>
-<a href="https://raynei.dev/why-avoid-scanf-as-a-beginner/">Permalink to this page</a>
-
 
   </main>
   <footer>
-© 2022 Lihui Zhang
 </footer>
 
     
