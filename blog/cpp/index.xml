@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cpp on Youye</title>
+    <link>https://raynei.dev/blog/cpp/</link>
+    <description>Recent content in cpp on Youye</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>All work released under public domain</copyright>
+    <lastBuildDate>Sun, 18 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://raynei.dev/blog/cpp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to think about C&#43;&#43; variadic templates</title>
+      <link>https://raynei.dev/how-to-think-about-c-variadic-templates/</link>
+      <pubDate>Sun, 18 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://raynei.dev/how-to-think-about-c-variadic-templates/</guid>
+      <description>Motivation Variadic templates are weird.
+They can&amp;rsquo;t be iterated through with a loop and the recursive approach is odd.
+Although I personally do dislike how variadic templates are handled in C++, I hope you learn to cognize it at the end of this post.
+Parameter packs == Lists Parameter packs are similar to lists in Lisp. The recursive approach is identical to how you unwrap a list in lisp. One warning though, you may be Lost In a Sea of Parentheses.</description>
+    </item>
+    
+  </channel>
+</rss>
